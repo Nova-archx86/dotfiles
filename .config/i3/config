@@ -178,8 +178,8 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-gaps inner 10
-gaps outer 20
+gaps inner 5
+gaps outer 10
 
 bindsym $mod+r mode "resize"
 
