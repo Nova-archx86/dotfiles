@@ -178,6 +178,9 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+gaps inner 10
+gaps outer 20
+
 bindsym $mod+r mode "resize"
 
 default_border pixel 3
@@ -192,7 +195,7 @@ set $text-color #FFFFFF
 client.focused $main-color $main-color $text-color
 
 bar { 
-    position bottom
+    position top
     status_command i3status
 
     colors {
