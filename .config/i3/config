@@ -106,10 +106,10 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Terminal"
-set $ws2 "2: Firefox"
-set $ws3 "3: Chat"
-set $ws4 "4: Media"
+set $ws1 "1:  "
+set $ws2 "2:  "
+set $ws3 "3:  "
+set $ws4 "4:  "
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -130,7 +130,7 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # assigned specific programs to workspaces
-assign [class="firefox"] $ws2
+assign [class="librewolf"] $ws2
 assign [class="discord"] $ws3
 assign [class="mpv"] $ws4 
 
@@ -194,22 +194,25 @@ set $text-color #FFFFFF
 
 client.focused $main-color $main-color $text-color
 
-bar { 
-    position top
-    status_command i3status
+#bar { 
+#    position top
+#    status_command i3status
 
-    colors {
-        background $main-color 
-        separator #757575 
-        focused_workspace $main-color $main-color $text-color 
-        inactive_workspace $inactive-color $inactive-color $text-color 
-        urgent_workspace $urgent-color $urgent-color $text-color
+#    colors {
+#       background $main-color 
+#        separator #757575 
+#        focused_workspace $main-color $main-color $text-color 
+#        inactive_workspace $inactive-color $inactive-color $text-color 
+#        urgent_workspace $urgent-color $urgent-color $text-color
 
-    }
-}
+#    }
+#}
 
 # custom keybinds
 bindsym $mod+shift+x exec slock
-bindsym $mod+shift+f exec firefox
+bindsym $mod+shift+f exec librewolf
 bindsym $mod+shift+z exec nitrogen $HOME/wallpapers 
 bindsym $mod+shift+s exec shotgun
+
+# Polybar launcher
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
