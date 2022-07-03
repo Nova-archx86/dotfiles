@@ -1,0 +1,17 @@
+add_newline = false
+
+# ~/.config/starship.toml
+
+[golang]
+symbol = "  "
+
+[python]
+symbol = "   "
+python_binary = "python3"
+
+[rust]
+symbol = "   "
+
+[lua]
+symbol = "   "
+detect_extensions = ["lua", "nse"]
