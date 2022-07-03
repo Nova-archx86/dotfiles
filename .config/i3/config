@@ -211,7 +211,7 @@ client.focused $main-color $main-color $text-color
 # custom keybinds
 bindsym $mod+shift+x exec slock
 bindsym $mod+shift+f exec librewolf
-bindsym $mod+shift+z exec nitrogen $HOME/wallpapers 
+bindsym $mod+shift+z exec nitrogen $HOME/Wallpapers 
 bindsym $mod+shift+s exec shotgun
 
 # Polybar launcher
