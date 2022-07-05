@@ -5,7 +5,7 @@ alias music="~/Scripts/music.sh"
 alias ls="ls --color -laAh"
 
 # Startup starship if its installed
-if [ -e /usr/bin/starship ];
+if [ -e /usr/bin/starship ] || [ -e /usr/local/bin/starship ];
 then
     eval "$(starship init bash)"
 fi
