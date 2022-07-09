@@ -50,4 +50,4 @@ fi
 
 nitrogen --restore &
 picom &
-exec i3
+exec dwm
