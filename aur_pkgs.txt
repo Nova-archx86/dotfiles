@@ -1,5 +1,5 @@
 librewolf-bin
-nerd-fonts-mononoki
+ttf-mononoki-git 
 wine-stable
 nvim-packer-git
 
