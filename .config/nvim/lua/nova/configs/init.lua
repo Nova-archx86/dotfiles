@@ -1,0 +1,5 @@
+require 'nova.configs.cmp'
+require 'nova.configs.tree_sitter'
+require 'nova.configs.tree'
+require 'nova.configs.barbar'
+require 'nova.configs.mason'

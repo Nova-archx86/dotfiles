@@ -1,0 +1,5 @@
+librewolf-bin
+nerd-fonts-mononoki
+wine-stable
+nvim-packer-git
+
