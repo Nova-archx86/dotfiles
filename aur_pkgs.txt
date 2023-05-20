@@ -1,5 +1,2 @@
 librewolf-bin
-ttf-mononoki-git 
-wine-stable
 nvim-packer-git
-
