@@ -11,10 +11,13 @@ build_paru() {
   cd ..
 }
 
-install_packages() {
+build_suckless() {
 	cd Dwm-build && make && sudo make install
   cd ../slock-build && make && sudo make install
   cd ..
+}
+
+install_packages() {
 	paru -S $(awk '{print $1}'  packages.txt)
 	paru -S $(awk '{print $1}' aur_pkgs.txt)
 }
@@ -38,4 +41,5 @@ get_dotfiles() {
 get_repos
 build_paru
 install_packages
+build_suckless
 get_dotfiles
