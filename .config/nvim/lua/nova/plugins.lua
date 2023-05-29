@@ -12,6 +12,7 @@ packer.startup(function()
   },
 }
 	use { 'catppuccin/nvim', as = 'catppuccin' }
+	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 	use 'williamboman/mason.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'neovim/nvim-lspconfig'

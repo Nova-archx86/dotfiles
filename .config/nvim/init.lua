@@ -9,7 +9,7 @@ if not catpuccin_status_ok then
 end
 
 catppuccin.setup({
-    flavour = "latte", -- latte, frappe, macchiato, mocha
+    flavour = "macchiato", -- latte, frappe, macchiato, mocha
     background = { -- :h background
         light = "latte",
         dark = "mocha",

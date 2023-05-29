@@ -11,9 +11,9 @@ keymap("", "<space>", "<Nop>", opts)
 -- Opens file explorer
 keymap("n", "<leader>e", ":NvimTreeOpen<cr>", opts)
 
--- New tab 
-keymap("n", "<leader>t", ":tabnew<cr>", opts)
--- Switch between tabs
-keymap("n", "<leader>n", ":tabn<cr>", opts)
-keymap("n", "<leader>p", ":tabp<cr>", opts)
+-- Switch between buffers
+keymap("n", "<leader>n", ":BufferNext<cr>", opts)
+keymap("n", "<leader>p", ":BufferPrevious<cr>", opts)
 
+-- close current buffer
+keymap("n", "<leader>q", ":BufferClose<cr>", opts)
