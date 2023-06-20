@@ -5,11 +5,11 @@ require 'nova.keymaps'
 
 local catpuccin_status_ok, catppuccin = pcall(require, 'catppuccin')
 if not catpuccin_status_ok then
-	print 'Warning! catpuccin nvim is not installed!'
+	print '[Warning] catpuccin nvim is not installed!'
 end
 
 catppuccin.setup({
-    flavour = "macchiato", -- latte, frappe, macchiato, mocha
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = { -- :h background
         light = "latte",
         dark = "mocha",
