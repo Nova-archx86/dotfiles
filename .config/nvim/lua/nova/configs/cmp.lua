@@ -1,24 +1,24 @@
 local cmp_status_ok, cmp = pcall(require, 'cmp')
 if not cmp_status_ok then
-	print 'Error nvim-cmp is not installed!'
+	print '[Error] nvim-cmp is not installed!'
 	return
 end
 
 local luasnip_status_ok, luasnips = pcall(require, 'luasnip')
 if not luasnip_status_ok then
-	print 'Error luasnip is not installed!'
+	print '[Error] luasnip is not installed!'
 	return
 end
 
 local cmp_lsp_status_ok, cmp_lsp = pcall(require, 'cmp_nvim_lsp')
 if not cmp_lsp_status_ok then
-	print 'Error cmp_nvim_lsp is not installed!'
+	print '[Error] cmp_nvim_lsp is not installed!'
 	return
 end
 
 local lspconfig_status_ok, lspconfig = pcall(require, 'lspconfig')
 if not lspconfig_status_ok then
-	print 'Error lspconfig is not installed!'
+	print '[Error] lspconfig is not installed!'
 	return
 end
 

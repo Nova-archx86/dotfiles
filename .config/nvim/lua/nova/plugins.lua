@@ -1,6 +1,6 @@
 local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
-	print 'Error: Packer is not installed!'
+	print '[Error] Packer is not installed!'
 	return
 end
 
@@ -13,6 +13,7 @@ packer.startup(function()
 }
 	use { 'catppuccin/nvim', as = 'catppuccin' }
 	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+	use 'folke/tokyonight.nvim'
 	use 'williamboman/mason.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'neovim/nvim-lspconfig'

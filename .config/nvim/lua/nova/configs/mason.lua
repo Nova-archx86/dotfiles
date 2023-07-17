@@ -1,6 +1,6 @@
 local mason_status_ok, mason = pcall(require, 'mason')
 if not mason_status_ok then
-	print 'Error mason.nvim is not installed'
+	print '[Warning] mason.nvim is not installed'
 end
 
 mason.setup({

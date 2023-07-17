@@ -8,6 +8,12 @@ if not catpuccin_status_ok then
 	print '[Warning] catpuccin nvim is not installed!'
 end
 
+local tokyo_status_ok, tokyo = pcall(require, 'tokyonight')
+if not tokyo_status_ok then
+	print('[Warning] tokyonight theme is not installed!')
+end
+
+--[[
 catppuccin.setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = { -- :h background
@@ -50,6 +56,7 @@ catppuccin.setup({
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
 })
+--]]
 
 -- setup must be called before loading
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "tokyonight"

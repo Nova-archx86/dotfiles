@@ -9,7 +9,7 @@ vim.g.loaded_netrwPlugin = 1
 
 local tree_status_ok, tree = pcall(require, "nvim-tree")
 if not tree_status_ok then
-	print 'Error nvim.tree is not installed'
+	print '[Error] nvim.tree is not installed'
 end
 
 tree.setup({
