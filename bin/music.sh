@@ -1,15 +1,15 @@
 #!/bin/sh
 
-if [[ -d $HOME/Music ]] 
+if [[ -d $HOME/music ]] 
 then
 	
-	if [[ -d $HOME/Music/$1 ]] 
+	if [[ -d $HOME/music/$1 ]] 
 	then
-		mpv --shuffle $HOME/Music/$1
+		mpv --shuffle $HOME/music/$1
 	else
 		echo "Error: playlist $1 not found!"
 	fi
 
 else
-	echo "Error: Music directory not found!"
+	echo "Error: music directory not found!"
 fi

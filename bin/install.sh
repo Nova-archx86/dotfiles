@@ -78,7 +78,7 @@ build_paru() {
 
 get_dotfiles() {
   cp -r .config $HOME 
-  cp -r Wallpapers $HOME
+  cp -r wallpapers $HOME
   cp -r bin $HOME
   cp .bash_profile $HOME
   cp .bashrc $HOME
