@@ -1,4 +1,4 @@
-alacritty 0.10.1-2
+kitty 0.28.1-2
 alsa-tools 1.2.5-1
 alsa-utils 1.2.7-1
 arch-wiki-docs 20220525-1
