@@ -1,3 +1,2 @@
-alacritty-themes
 librewolf-bin
 nvim-packer-git
