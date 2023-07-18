@@ -4,7 +4,7 @@ This repo just contains configuration files and scripts for my semi-minimal arch
 ### Installation:
 clone the repo recursively using your tool of choice:
 
-    git clone -r https://github.com/Nova-archx86/dotfiles
+    git clone --recurse-submodules https://github.com/Nova-archx86/dotfiles
 
 Run the installation script:
 
