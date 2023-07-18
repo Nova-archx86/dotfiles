@@ -1,7 +1,7 @@
 #!/bin/sh
 
 get_repos() {
-  git clone https://github.com/Nova-archx86/Dwm-build
+  git clone https://github.com/Nova-archx86/dwm-build
   git clone https://github.com/Nova-archx86/slock-build 
   git clone https://aur.archlinux.org/paru.git
 }
@@ -44,7 +44,7 @@ build_suckless() {
 		"y")
 			if [[ -d /usr/include/X11 ]] # chek for X11 libs
 			then
-				cd Dwm-build
+				cd dwm-build
 				make && sudo make install
 				cd ../slock-build
 				make && sudo make install
