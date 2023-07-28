@@ -1,8 +1,10 @@
 #!/bin/sh
 
 get_repos() {
-  git clone https://github.com/Nova-archx86/dwm-build
+	git clone https://github.com/Nova-archx86/dmenu-build	
+ 	git clone https://github.com/Nova-archx86/dwm-build
   git clone https://github.com/Nova-archx86/slock-build 
+	git clone https://github.com/Nova-archx86/z-scanner
   git clone https://aur.archlinux.org/paru.git
 }
 
