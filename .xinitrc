@@ -48,8 +48,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-/home/nova/Scripts/bar.sh &
-nitrogen --set-auto --random /home/nova/Wallpapers &
-picom &
-export _JAVA_AWT_WM_NONREPARENTING=1
+/home/nova/bin/bar.sh &
+nitrogen --set-auto --random /home/nova/wallpapers &
+# uncoment if the system is powerful enough to handle a compositor
+# picom &
 exec dwm
