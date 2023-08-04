@@ -40,7 +40,8 @@ install_display_server() {
 }
 
 build_suckless() {
-	read CHOICE -p "Would you like to use suckless utils (Requires X11)"
+	echo -e "Would you like to use suckless utils (Requires X11)\n"
+	read CHOICE;
 
 	case $CHOICE in 
 		"y")
@@ -51,6 +52,8 @@ build_suckless() {
 				cd ../slock-build
 				make && sudo make install
 				cd ..
+				cd dmenu-build
+				make && sudo make install
 			else
 				echo -e "Error X11 libs are not installed!\n"
 			fi
@@ -78,7 +81,7 @@ build_paru() {
   cd ..
 }
 
-get_dotfiles() {
+copy_dotfiles() {
   cp -r .config $HOME 
   cp -r wallpapers $HOME
   cp -r bin $HOME
@@ -93,4 +96,4 @@ build_paru
 install_display_server
 build_suckless
 install_packages
-get_dotfiles
+copy_dotfiles
