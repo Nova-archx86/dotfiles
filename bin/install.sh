@@ -40,12 +40,12 @@ install_display_server() {
 }
 
 build_suckless() {
-	echo -e "Would you like to use suckless utils (Requires X11)\n"
+	echo -e "Would you like to use suckless utils? (Requires X11)\n"
 	read CHOICE;
 
 	case $CHOICE in 
 		"y")
-			if [[ -d /usr/include/X11 ]] # chek for X11 libs
+			if [[ -d /usr/include/X11 || -d /usr/local/include/X11 ]] # check for X11 libs
 			then
 				cd dwm-build
 				make && sudo make install
