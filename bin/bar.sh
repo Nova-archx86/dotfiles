@@ -1,21 +1,29 @@
 #!/bin/sh
 
 # Font awesome version 5 or later is required for the icons to work.
-NIC="enp3s0f0"
-DRIVE_PATH="/dev/sda3"
+
+OS_ICON=""
+
+if [[ $(uname) == "Linux" ]]; then
+		OS_ICON=" "
+elif [[ $(uname) == "FreeBSD" ]]; then
+		OS_ICON=" "
+else
+	OS_ICON=" "
+fi
 
 addr() {
-    ADDR=" $(ip -br addr | grep $NIC | awk '{print $3}')"
+    ADDR=" $(ip addr | grep -e "inet" | awk 'FNR == 3{print $4}')"
     echo $ADDR
 }
 
 kernel() {
-    KERNEL=" $(uname -sr)"
+    KERNEL="$OS_ICON $(uname -sr)"
     echo $KERNEL
 }
 
 hdd() {
-    HDD_USAGE=" $(df -H /home | grep $DRIVE_PATH | awk  '{print $4}')"
+    HDD_USAGE=" $(df -H /home/ | awk 'FNR == 2 {print $4}')"
     echo $HDD_USAGE
 }
 
