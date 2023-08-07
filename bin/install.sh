@@ -85,10 +85,10 @@ copy_dotfiles() {
   cp -r $HOME/dotfiles/.config $HOME 
   cp -r $HOME/dotfiles/wallpapers $HOME
   cp -r $HOME/dotfiles/bin $HOME
-  cp $HOME/.bash_profile $HOME
-  cp $HOME.bashrc $HOME
-  cp $HOME.xinitrc $HOME 
-  cp $HOME.vimrc $HOME
+  cp $HOME/dotfiles/.bash_profile $HOME
+  cp $HOME/dotfiles/.bashrc $HOME
+  cp $HOME/dotfiles/.xinitrc $HOME 
+  cp $HOME/dotfiles/.vimrc $HOME
 }
 
 get_repos
