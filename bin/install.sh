@@ -40,7 +40,7 @@ install_display_server() {
 }
 
 build_suckless() {
-	echo -e "Would you like to use suckless utils? (Requires X11)\n"
+	echo -e "Would you like to use suckless utils (Requires X11) y/n? \n"
 	read CHOICE;
 
 	case $CHOICE in 
@@ -82,13 +82,13 @@ build_paru() {
 }
 
 copy_dotfiles() {
-  cp -r .config $HOME 
-  cp -r wallpapers $HOME
-  cp -r bin $HOME
-  cp .bash_profile $HOME
-  cp .bashrc $HOME
-  cp .xinitrc $HOME 
-  cp .vimrc $HOME
+  cp -r $HOME/dotfiles/.config $HOME 
+  cp -r $HOME/dotfiles/wallpapers $HOME
+  cp -r $HOME/dotfiles/bin $HOME
+  cp $HOME/.bash_profile $HOME
+  cp $HOME.bashrc $HOME
+  cp $HOME.xinitrc $HOME 
+  cp $HOME.vimrc $HOME
 }
 
 get_repos
