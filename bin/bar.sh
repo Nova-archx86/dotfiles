@@ -3,17 +3,21 @@
 # Font awesome version 5 or later is required for the icons to work.
 
 OS_ICON=""
+PKG_CMD=""
 
 if [[ $(uname) == "Linux" ]]; then
 		OS_ICON=" "
+		PKG_CMD="pacman -Q" # "I use arch btw" -every archuser ever.
 elif [[ $(uname) == "FreeBSD" ]]; then
 		OS_ICON=" "
+		PKG_CMD="pkg info"
 else
 	OS_ICON=" "
+	PKG_CMD="pkg_info" # Probably open bsd if im not using FreeBSD or linux
 fi
-
+echo $PKG_CMD
 addr() {
-    ADDR=" $(ip addr | grep -e "inet" | awk 'FNR == 3{print $4}')"
+    ADDR=" $(ip addr | grep -e "inet" | awk 'FNR == 3{print $2}')"
     echo $ADDR
 }
 
@@ -33,7 +37,7 @@ cpu() {
 }
 
 pack() {
-    PACKAGES=" $(pacman -Q | wc -l)"
+    PACKAGES=" $($PKG_CMD | wc -l)"
     echo $PACKAGES
 }
 
