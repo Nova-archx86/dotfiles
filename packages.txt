@@ -28,5 +28,3 @@ ttf-mononoki-nerd 3.0.0-2
 wget 1.21.3-1
 whois 5.5.13-1
 wireshark-qt 3.6.6-1
-xorg
-xorg-xinit
