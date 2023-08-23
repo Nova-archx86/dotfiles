@@ -1,3 +1,2 @@
 librewolf-bin
 nvim-packer-git
-pfetch
