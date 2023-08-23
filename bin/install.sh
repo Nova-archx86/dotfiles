@@ -1,10 +1,11 @@
 #!/bin/sh
 
 get_repos() {
-	git clone https://github.com/Nova-archx86/dmenu-build	
- 	git clone https://github.com/Nova-archx86/dwm-build
-  git clone https://github.com/Nova-archx86/slock-build 
-	git clone https://github.com/Nova-archx86/z-scanner
+	git clone https://github.com/Nova-archx86/dmenu-nova
+ 	git clone https://github.com/Nova-archx86/dwm-nova
+	git clone https://github.com/Nova-archx86/dwl-nova
+  git clone https://github.com/Nova-archx86/slock-nova
+	git clone https://github.com/Nova-archx86/st-nova
   git clone https://aur.archlinux.org/paru.git
 }
 
@@ -20,11 +21,11 @@ install_display_server() {
 
 	case $CHOICE in
 		"1")
-			paru -S xorg xorg-xinit
+			paru -S xorg xorg-xinit nitrogen
 			;;
 
 		"2")
-			paru -S wayland hyprland
+			paru -S wayland
 			;;
 
 		"3")
@@ -40,20 +41,27 @@ install_display_server() {
 }
 
 build_suckless() {
-	echo -e "Would you like to use suckless utils (Requires X11) y/n? \n"
+	echo -e "Would you like to use suckless utils (Requires X11 except for dwl) y/n? \n"
 	read CHOICE;
 
 	case $CHOICE in 
 		"y")
 			if [[ -d /usr/include/X11 || -d /usr/local/include/X11 ]] # check for X11 libs
 			then
-				cd dwm-build
+				cd dwm-nova
 				make && sudo make install
-				cd ../slock-build
+				cd ../slock-nova
 				make && sudo make install
 				cd ..
-				cd dmenu-build
+				cd dmenu-nova
 				make && sudo make install
+				cd ..
+				cd st-nova
+				make && sudo make install
+				cd ..
+				cd dwl-nova
+				make && sudo make install
+				cd ..
 			else
 				echo -e "Error X11 libs are not installed!\n"
 			fi
