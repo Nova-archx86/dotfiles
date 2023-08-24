@@ -21,11 +21,11 @@ install_display_server() {
 
 	case $CHOICE in
 		"1")
-			paru -S xorg xorg-xinit nitrogen
+			paru -S xorg xorg-xinit nitrogen bemenu-x11
 			;;
 
 		"2")
-			paru -S wayland
+			paru -S wayland bemenu-wayland
 			;;
 
 		"3")
