@@ -13,9 +13,12 @@ fi
 
 alias ls="ls -laAh"
 alias v="nvim"
-alias ssh="kitty +kitten ssh"
-alias icat="kitty +kitten icat"
-alias themes="kitty +kitten themes"
+
+if [[ -e /usr/bin/kitty || -e /usr/local/bin/kitty ]]; then
+	alias ssh="kitty +kitten ssh"
+	alias icat="kitty +kitten icat"
+	alias themes="kitty +kitten themes"
+fi
 
 # Prompt
 GREEN="\[$(tput setaf 82)\]"
