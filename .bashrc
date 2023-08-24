@@ -11,7 +11,7 @@ then
 	alias ll="lsd -la"
 fi
 
-alias ls="-laAh"
+alias ls="ls -laAh"
 alias v="nvim"
 alias ssh="kitty +kitten ssh"
 alias icat="kitty +kitten icat"
