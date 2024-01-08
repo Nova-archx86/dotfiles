@@ -1,41 +1,96 @@
 /**
- * @name NineX
- * @author Saltssaumure
- * @authorLink https://github.com/Saltssaumure
- * @description A Windows 9x style Discord theme.
- * @license GPL-3.0
- * @version 1.3
- * @invite uy8nKQVatp
- * @source https://github.com/Saltssaumure/w9x-discord-theme
- * @donate https://ko-fi.com/saltssaumure
+* @name WizardUI
+* @author NEBULYS
+* @authorLink https://github.com/GoldenLys
+* @version RELEASE
+* @invite SBuYeHh
+* @description An amazing fully customizable theme, made with 💖 by NEBULYS.
+* @website https://purplewizard.space/
 */
 
-@import url("https://saltssaumure.github.io/w9x-discord-theme/w9x.min.css");
+@import url("https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap");
 
-/* See https://github.com/Saltssaumure/w9x-discord-theme#customisation for customisation settings. */
+/* This is an addon that adds the Marianne font.
+@import url("https://goldenlys.github.io/WizardUI/addons/Marianne.css"); */
+
+@import url("https://goldenlys.github.io/WizardUI/base.css");
+
+/* This is an addon that moves the servers to the top with an horizontal width.*/
+@import url("https://goldenlys.github.io/WizardUI/addons/PurpleServerList.css");
+
+/* This is a modification for PurpleServerList which replaces the folders icons with letters.
+@import url("https://goldenlys.github.io/WizardUI/addons/LettersInPSL.css"); */
+
+/* This is an addon that makes the members list hidden until you hover it.
+@import url("https://goldenlys.github.io/WizardUI/addons/HoverMembers.css"); */
+
+/* This is an addon that moves the "user is typing" text to the bottom of the app, like the default discord.
+@import url("https://goldenlys.github.io/WizardUI/addons/UserIsTyping.css"); */
+
+/* This is an addon that recolors alot of elements in the app with the main theme color but you can even add an RGB animated effect if you change the number before the ".css" (with a maximum of 10 colors).
+@import url("https://goldenlys.github.io/WizardUI/addons/EvenMoreColors/1.css"); */
+
 :root {
-    --w9x-background-image: none;
-    --w9x-background-color: #008080;
-    --w9x-start-text:       "Windows95";
+    /* MAIN VARIABLES */
+    --AppName: "DISCORD";
+    --Watermark: "WizardUI";
+    --font: 'Quicksand', 'emoji', sans-serif;
+    --Text: rgb(255, 255, 255);
+    --logo: url(https://goldenlys.github.io/WizardUI/images/home.png);
 
-    --w9x-titlebar-color:   #000080;
-    --w9x-warning-color:    #FF0000;
-    --w9x-positive-color:   #008000;
-    --w9x-highlight-color:  #0000FF;
+    /* STATUS VARIABLES */
+    --Online: rgb(0, 255, 6);
+    --Idle: rgb(18, 100, 239);
+    --Unavailable: rgb(228, 15, 0);
+    --Offline: rgb(90, 95, 100);
+    --Streaming: rgb(110, 0, 196);
 
-    --w9x-box-color-1:      #FFFFFF;
-    --w9x-box-color-2:      #DFDFDF;
-    --w9x-box-color-3:      #C0C0C0;
-    --w9x-box-color-4:      #808080;
-    --w9x-box-color-5:      #000000;
-}
+    /* UI COLOR VARIABLES */
+    --grey: rgb(18, 19, 31);
+    --grey5: rgba(18, 19, 31, .75);
+    --darkgrey: rgb(10, 10, 20);
+    --darkgrey5: rgba(10, 10, 20, .75);
+    --ui-success: rgb(69, 208, 34);
+    --ui-warning: rgb(238, 165, 30);
+    --ui-error: rgb(208, 34, 34);
 
-.theme-light {
-    --w9x-bg-color:     #FFFFFF;
-    --w9x-text-color:   #000000;
-}
+    /* THEME COLORS */
+    --Primary: rgb(117 76 205);
+    --text-link: var(--Primary);
+    --Highlighted: rgba(117 76 205 / 50%);
+    --MessageHover: transparent;
+    --Unread: rgb(255 255 255);
+    --Hover: rgb(18 19 31 / 50%);
+    --Selected: rgb(56 33 146);
 
-.theme-dark {
-    --w9x-bg-color:     #000000;
-    --w9x-text-color:   #DFDFDF;
+    /* BACKGROUNDS */
+    --background: url(https://goldenlys.github.io/WizardUI/images/backgrounds/nebula.jpg);
+    --bg-titlebar: rgba(0, 0, 0, 0.65);
+    --bg-servers: rgba(0, 0, 0, 0.65);
+    --bg-ui: rgba(0, 0, 0, 0.65);
+    --bg-chatbox: rgba(0, 0, 0, 0.5);
+    --bg-sendmessage: rgba(0, 0, 0, 0.65);
+    --bg-members: rgba(0, 0, 0, 0.65);
+    --bg-chat-elements: rgba(0, 0, 0, 0.5);
+    --bg-colorprofile: rgba(0, 0, 0, 0.5);
+
+    /* SERVER SETTINGS */
+    --ServerSize: 45px;
+    --ServerPills: var(--Primary);
+
+    /* ROUNDING */
+    --Rounding: 5px;
+    --StatusRounding: 4.5;
+
+    /* RGB ADDON */
+    --ColorTime: 2s;
+    --Color2: rgb(0, 225, 255);
+    --Color3: rgb(0 0 0);
+    --Color4: rgb(0 0 0);
+    --Color5: rgb(0 0 0);
+    --Color6: rgb(0 0 0);
+    --Color7: rgb(0 0 0);
+    --Color8: rgb(0 0 0);
+    --Color9: rgb(0 0 0);
+    --Color10: rgb(0 0 0);
 }
