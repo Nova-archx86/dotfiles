@@ -1,2 +1,3 @@
 librewolf-bin
+mullvad-vpn
 nvim-packer-git
