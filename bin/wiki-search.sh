@@ -7,7 +7,7 @@ docs=$(find ${dir} -iname "*.html")
 
 choice=$(printf '%s\n' "${docs[@]}" | \
 	cut -d '/' -f8- | \
-	dmenu -fn "Mononoki Nerd font:size15" -sb "#660033" -i -l 20 -p "arch-wiki docs: ")
+	dmenu -fn "Mononoki Nerd font:size15" -sb "#20B2AA" -i -l 20 -p "arch-wiki docs: ")
 
 if [ "$choice" ]; then
 	$browser "$dir/$choice"
