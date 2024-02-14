@@ -15,3 +15,9 @@ keymap("n", "<leader>t", ":ToggleTerm<cr>", opts)
 keymap("n", "<leader>n", ":tabnew<cr>", opts)
 keymap("n", "<leader>,", ":tabp<cr>", opts)
 keymap("n", "<leader>.", ":tabn<cr>", opts)
+
+-- nvim tree
+keymap("n", "<leader>e", ":NvimTreeOpen<cr>", opts)
+keymap("n", "<leader>r", ":NvimTreeClose<cr>", opts)
+
+
