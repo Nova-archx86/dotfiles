@@ -25,4 +25,7 @@ packer.startup(function()
 	use 'tanvirtin/monokai.nvim'
 	use 'ellisonleao/gruvbox.nvim'
 	use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
+	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+	use 'nvim-tree/nvim-tree.lua'
+	use 'scottmckendry/cyberdream.nvim'
 end)
