@@ -77,7 +77,7 @@ cmp.setup({
     })
   })
 
-	local servers = {'lua_ls', 'clangd', 'zls', 'gopls', 'jedi_language_server'}
+	local servers = {'lua_ls', 'clangd', 'zls', 'gopls', 'jedi_language_server', 'texlab'}
   local capabilities = cmp_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 	for i, serv in ipairs(servers) do
