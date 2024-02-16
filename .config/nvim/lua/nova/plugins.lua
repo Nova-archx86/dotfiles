@@ -28,4 +28,6 @@ packer.startup(function()
 	use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 	use 'nvim-tree/nvim-tree.lua'
 	use 'scottmckendry/cyberdream.nvim'
+	use 'nocksock/bloop.nvim'
+	use 'rktjmp/lush.nvim'
 end)
