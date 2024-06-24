@@ -1,15 +1,7 @@
 #!/bin/sh
 
-if [[ -d $HOME/music ]] 
-then
-	
-	if [[ -d $HOME/music/$1 ]] 
-	then
-		mpv --shuffle $HOME/music/$1
-	else
-		echo "Error: playlist $1 not found!"
-	fi
-
-else
-	echo "Error: music directory not found!"
-fi
+dir=/mnt/hdd
+font="Mononoki Nerd Font:size=15"
+opts="-sb #00FF00 -l 10"
+choice=$(ls $dir/music | dmenu -fn "$font" $opts)
+mpv --shuffle $dir/music/$choice
