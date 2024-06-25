@@ -21,7 +21,7 @@ if [[ -e /usr/bin/kitty || -e /usr/local/bin/kitty ]]; then
 fi
 
 # Prompt
-GREEN="\[$(tput setaf 82)\]"
+GREEN="\[$(tput setaf 154)\]"
 LIGHT_BLUE="\[$(tput setaf 39)\]"
 RESET="\[$(tput sgr0)\]"
 PS1="$LIGHT_BLUE\u$GREEN:\W \[λ\]$RESET "
