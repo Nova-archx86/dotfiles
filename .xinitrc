@@ -47,9 +47,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  done
  unset f
 fi
-
+export _JAVA_AWT_WM_NONREPARENTING=1
 /home/nova/bin/bar.sh &
-nitrogen --set-auto --random /home/nova/wallpapers &
-# uncoment if the system is powerful enough to handle a compositor
+nitrogen --restore
 # picom &
-exec dwm
+#exec cinnamon-session
+exec dwm -nb '#2b2b2b' -nf '#6495ed' -sb '#6495ed' -sf '#2b2b2b'
