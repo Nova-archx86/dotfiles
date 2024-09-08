@@ -33,3 +33,7 @@ whois 5.5.13-1
 wireshark-qt 3.6.6-1
 wireplumber 0.4.17-1
 yt-dlp 2023.12.30-1
+zsh 5.9-5
+zsh-completions-git 0.35.0.r144.g10dd51d-1
+zsh-syntax-highlighting 0.8.0-1
+
