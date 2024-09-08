@@ -3,22 +3,29 @@
 # Font awesome version 5 or later is required for the icons to work.
 
 OS_ICON=""
-PKG_CMD=""
+IFACE="wlan0" # set the default interface to wlan0 by default
+
+# Colors
+
+RED="\[$(tput setaf 160)\]"
+GREEN="\[$(tput setaf 118)\]"
+BLUE="\[$(tput setaf 33)\]"
+YELLOW="\[$(tput setaf 172)\]"
+ORGANGE="\[$(tput setaf 166)\]"
+PURPLE="\[$(tput setaf 190)\]"
+RESET="\[$(tput sgr0)\]"
 
 if [[ $(uname) == "Linux" ]]; then
-		OS_ICON=" "
-		PKG_CMD="pacman -Q" # "I use arch btw" -every archuser ever.
+	OS_ICON=" "
 elif [[ $(uname) == "FreeBSD" ]]; then
-		OS_ICON=" "
-		PKG_CMD="pkg info"
-else
-	OS_ICON=" "
-	PKG_CMD="pkg_info" # Probably open bsd if im not using FreeBSD or linux
+	OS_ICON=" "
+elif [[ $(uname) == "OpenBSD" ]]; then
+	OS_ICON=" "
 fi
-echo $PKG_CMD
-addr() {
-    ADDR=" $(ip addr | grep -e "inet" | awk 'FNR == 3{print $2}')"
-    echo $ADDR
+
+vol () {
+	VOL="  %$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk -F '0.' '{print $2}')"
+	echo $VOL
 }
 
 kernel() {
@@ -31,23 +38,18 @@ hdd() {
     echo $HDD_USAGE
 }
 
-cpu() {
-    CPU_USAGE="  $(echo "CPU: "$[100-$(vmstat 1 2|tail -1|awk '{print $15}')]"%")"
-    echo $CPU_USAGE
-}
-
 pack() {
-    PACKAGES=" $($PKG_CMD | wc -l)"
+    PACKAGES=" $(pacman -Q | wc -l)"
     echo $PACKAGES
 }
 
 ndate() {
-	NDATE="  $(date +"%a %b %d %I:%M %Y")"
+	NDATE="  $(date +"%b %d %Y %I:%M")"
 	echo $NDATE
 }
 
 status_bar() {
-	echo "$(cpu) | $(hdd) | $(addr) | $(pack) | $(ndate) | $(kernel)"
+	echo "[ $(hdd) ] [ $(vol) ] [ $(ndate) ] [ $(kernel) ]"
 }
 
 while true; do
