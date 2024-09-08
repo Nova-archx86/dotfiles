@@ -21,7 +21,7 @@ install_display_server() {
 
 	case $CHOICE in
 		"1")
-			paru -S xorg xorg-xinit nitrogen bemenu-x11
+			paru -S xorg xorg-xinit nitrogen
 			;;
 
 		"2")
@@ -34,6 +34,7 @@ install_display_server() {
 
 		*)
 			echo -e "Error not a valid option!\n"
+			exit 1
 			;;
 
 		esac
@@ -64,6 +65,7 @@ build_suckless() {
 				cd ..
 			else
 				echo -e "Error X11 libs are not installed!\n"
+				exit 1
 			fi
 			;;
 
@@ -73,6 +75,7 @@ build_suckless() {
 
 	*)
 		echo -e "Error not an a valid option!\n"
+		exit 1
 		;;
 
 	esac
@@ -103,5 +106,5 @@ get_repos
 build_paru
 install_display_server
 build_suckless
-install_packages
 copy_dotfiles
+install_packages
