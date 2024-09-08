@@ -1,3 +1,3 @@
-dmenu_sb="#6495ed"
-dmenu_sf="#444444"
+dmenu_sb="#afd2ce"
+dmenu_sf="#1d1d1f"
 
