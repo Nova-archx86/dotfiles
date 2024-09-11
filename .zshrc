@@ -30,3 +30,4 @@ alias yt="yt-dlp -o '%(title)s.%(ext)s' -x --audio-format mp3"
 alias ytv="yt-dlp -o '%(title)s.%(ext)s' --recode-video mp4"
 alias htop="btop -t"
 
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
