@@ -6,6 +6,7 @@ get_repos() {
 	git clone https://github.com/Nova-archx86/dwl-nova
   git clone https://github.com/Nova-archx86/slock-nova
 	git clone https://github.com/Nova-archx86/st-nova
+	git clone https://github.com/Nova-archx86/nvim
   git clone https://aur.archlinux.org/paru.git
 }
 
@@ -92,8 +93,8 @@ build_paru() {
   cd ..
 }
 
-copy_dotfiles() {
-  cp -r $HOME/dotfiles/.config $HOME 
+copy_dotfiles() { 
+	cp -r $HOME/dotfiles/.config $HOME 
   cp -r $HOME/dotfiles/wallpapers $HOME
   cp -r $HOME/dotfiles/bin $HOME
   cp $HOME/dotfiles/.bash_profile $HOME
