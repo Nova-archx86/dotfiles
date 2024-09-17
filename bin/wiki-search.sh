@@ -4,7 +4,7 @@
 
 # Script idea courtousey of distro-tube
 dir="/usr/share/doc/arch-wiki/html/en"
-browser=librewolf # not using xdg-open due to having multiple browsers installed
+browser=surf # not using xdg-open due to having multiple browsers installed
 docs=$(find ${dir} -iname "*.html")
 
 choice=$(printf '%s\n' "${docs[@]}" | \
