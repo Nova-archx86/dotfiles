@@ -1,10 +1,14 @@
 #!/bin/sh
 # This script will later be aliased to "vm" in my .bashrc
-VMS_DIR=$HOME/vms
+#
+. dmenu_colors.sh
 
-if [[ -d $VMS_DIR/$1 ]]; then
-	$VMS_DIR/$1/start.sh # entry point script for starting any of my vms
+VMS_DIR=/mnt/hdd/vms
+LISTNUM=$(ls $VMS_DIR | wc -l) # used by dmenu -l
+CHOICE="$(ls $VMS_DIR | dmenu -fn "$dmenu_fn" -sb "$dmenu_sb" -sf "$dmenu_sf" -l $LISTNUM -p "vms:")"
+
+if [ "$CHOICE" ]; then
+	exec $VMS_DIR/$CHOICE/start.sh
 else
-	echo -e "Error $VMS_DIR/$1 does not exsist!\n"
+	exit 0;
 fi
-
