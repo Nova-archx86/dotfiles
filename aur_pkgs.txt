@@ -1,3 +1,3 @@
-librewolf-bin
-mullvad-vpn
-nvim-packer-git
+librewolf-bin 130.0.1-1
+mpv-mpvacious 0.35-1
+nvim-packer-git r574.ea0cc3c-1
