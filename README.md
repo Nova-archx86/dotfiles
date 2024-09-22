@@ -2,7 +2,7 @@
 This repo just contains configuration files and scripts for my semi-minimal arch linux build
 
 ### Installation:
-clone the repo recursively using your tool of choice:
+clone the repo using your tool of choice:
 
     git clone https://github.com/Nova-archx86/dotfiles
 
