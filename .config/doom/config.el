@@ -40,7 +40,13 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org")
 
+(use-package! org-download)
+        :config
+        (add-hook 'dired-mode-hook 'org-download-enable)
 
+(use-package! org-modern)
+        :config
+        (with-eval-after-load 'org (global-org-modern-mode))
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
