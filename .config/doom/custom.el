@@ -3,7 +3,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(elfeed-feeds '("https://lukesmith.xyz/index.xml")))
+ '(elfeed-feeds
+   '("https://feeds.feedburner.com/sfn-blogs" "https://lukesmith.xyz/index.xml") t)
+ '(org-safe-remote-resources
+   '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-bigblow\\.setup\\'" "\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-NAME\\.setup\\'")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
