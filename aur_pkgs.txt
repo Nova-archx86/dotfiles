@@ -1,3 +1,5 @@
 librewolf-bin 130.0.1-1
 mpv-mpvacious 0.35-1
 nvim-packer-git r574.ea0cc3c-1
+hardinfo2 2.1.17-1
+zsh-completions-git 0.34.0.r110.g6a5b724-1
