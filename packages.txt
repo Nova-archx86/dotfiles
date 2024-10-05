@@ -8,6 +8,7 @@ gvfs 1.54.2-1
 gvfs-smb 1.54.2-1
 htop 3.2.1-1
 keepassxc 2.7.6-2
+libgit2 1:1.8.1-1
 lsd 0.23.1-2
 lua 5.4.4-4
 man-pages 5.13-1
