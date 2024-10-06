@@ -16,7 +16,10 @@ compinit
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
-export PS1="%F{blue}%n:${vcs_info_msg_0_}%f%1~ %F{cyan}󰘧%f "
+
+# un comment for a more basic prompt (if there is no support for nerdfonts
+# export PS1="%F{blue}%n:${vcs_info_msg_0_}%f%1~ %F{cyan}\\$%f " 
+export PROMPT="%F{cyan} %3~%f"$'\n'"  "
 
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
