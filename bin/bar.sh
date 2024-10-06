@@ -48,8 +48,47 @@ ndate() {
 	echo $NDATE
 }
 
+bat() {
+    BAT_CAP="$(cat /sys/class/power_supply/BAT0/capacity)"
+    BAT_STATUS="$(cat /sys/class/power_supply/BAT0/status)"
+    BAT_LVL=$(expr $BAT_CAP - 0)
+
+    if [ "$BAT_LVL" -eq 100 ]
+    then
+        BAT_ICO="󰁹"
+    fi
+
+    if [ "$BAT_LVL" -le 75 -a "$BAT_LVL" -gt 50 ]
+    then
+        BAT_ICO="󰂀"
+    fi
+
+    if [ "$BAT_LVL" -le  50 ]
+    then
+        BAT_ICO="󰁾"
+    fi
+
+    if [ "$BAT_LVL" -le 25 ]
+    then
+        BAT_ICO="󰁻"
+    fi
+
+    if [ "$BAT_LVL" -le 10 ]
+    then
+        BAT_ICO="󰂃"
+    fi
+
+    if [ $BAT_STATUS == Charging ]; then
+        BAT_ICO="󰂄"
+    fi
+    echo "$BAT_ICO $BAT_CAP %"
+
+}
+
 status_bar() {
-	echo "[ $(hdd) ] [ $(vol) ] [ $(ndate) ] [ $(kernel) ]"
+# un comment for battery 
+	#echo "[ $(hdd) ] [ $(vol) ] [ $(ndate) ] [ $(kernel) ] [ $(bat) ]"
+    echo "[ $(hdd) ] [ $(vol) ] [ $(ndate) ] [ $(kernel) ]"
 }
 
 while true; do
