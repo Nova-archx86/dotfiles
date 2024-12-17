@@ -58,17 +58,22 @@ bat() {
         BAT_ICO="󰁹"
     fi
 
+    if  [ "$BAT_LVL" -le 100 -a "$BAT_LVL" -gt 75 ]
+    then
+        BAT_ICO="󰂂"
+    fi
+
     if [ "$BAT_LVL" -le 75 -a "$BAT_LVL" -gt 50 ]
     then
         BAT_ICO="󰂀"
     fi
 
-    if [ "$BAT_LVL" -le  50 ]
+    if [ "$BAT_LVL" -le  50 -a "$BAT_LVL" -gt 25 ]
     then
         BAT_ICO="󰁾"
     fi
 
-    if [ "$BAT_LVL" -le 25 ]
+    if [ "$BAT_LVL" -le 25 -a "$BAT_LVL" -gt 10 ]
     then
         BAT_ICO="󰁻"
     fi
@@ -85,13 +90,23 @@ bat() {
 
 }
 
+backlight() {
+    BACKLIGHT_DEV=intel_backlight # replace with acpi_video0 for other devices
+    CUR_BRIGHT="$(cat /sys/class/backlight/$BACKLIGHT_DEV/brightness)"
+    MAX_BRIGHTNESS="$(cat /sys/class/backlight/$BACKLIGHT_DEV/max_brightness)"
+    BRIGHTNESS="$(python3 -c "from math import floor; a=$CUR_BRIGHT; b=$MAX_BRIGHTNESS; print(floor((a/b)*100))")"
+    echo "󰃠  $BRIGHTNESS %"
+}
+
+weather() {
+	CURR_WEATHER="$(curl https://wttr.in/barstow?format=3)"
+	echo "$CURR_WEATHER"
+}
 status_bar() {
-# un comment for battery 
-	#echo "[ $(hdd) ] [ $(vol) ] [ $(ndate) ] [ $(kernel) ] [ $(bat) ]"
-    echo "[ $(hdd) ] [ $(vol) ] [ $(ndate) ] [ $(kernel) ]"
+	echo "[ $(hdd) ] [ $(vol) ] [ $(backlight) ] [ $(bat) ] [ $(ndate) ]"
 }
 
 while true; do
-    xsetroot -name "$(status_bar)"
-    sleep 1
+    status_bar
+    sleep 2
 done

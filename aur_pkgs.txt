@@ -1,5 +1,9 @@
-librewolf-bin 130.0.1-1
-mpv-mpvacious 0.35-1
-nvim-packer-git r574.ea0cc3c-1
+abcde 2.9.3-5
+alacritty-themes 6.0.2-1
+cd-discid 1.4-3
 hardinfo2 2.1.17-1
-zsh-completions-git 0.34.0.r110.g6a5b724-1
+librewolf-bin 131.0.2-1
+mullvad-vpn-bin 2024.8-1
+pfetch 1.7.0-1
+startw 1.1.1-4
+waypaper 2.4-1
