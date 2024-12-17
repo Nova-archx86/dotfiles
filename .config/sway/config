@@ -15,10 +15,13 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
+set $browser librewolf
+set $music $HOME/bin/music.sh
 # Your preferred application launcher
 set $background "#0e182a"
 set $foreground "#00b0d8"
-set $menu bemenu-run --fbb $background --fbf $foreground --fb $background --ff $foreground --tb $background --tf $foreground --hb $foreground --hf $background --nb $background --nf $foreground --sb $foreground --sf $background --ab $background --af $foreground
+#set $menu bemenu-run --fn MononokiNerdFont --fbb $background --fbf $foreground --fb $background --ff $foreground --tb $background --tf $foreground --hb $foreground --hf $background --nb $background --nf $foreground --sb $foreground --sf $background --ab $background --af $foreground
+set $menu dmenu_run -fn MononokiNerdFont -nb $background -nf $foreground -sb $foreground -l 10
 set $emacs emacsclient -c
 set $explorer pcmanfm $HOME
 set $lock swaylock
@@ -67,6 +70,9 @@ exec swayidle -w \
     # Start a terminal
     bindsym $mod+Return exec $term
 
+    # Play music
+    bindsym $mod+Shift+m exec $music
+
     # Start an emacs session
     bindsym $mod+Shift+g  exec $emacs
 
@@ -74,7 +80,7 @@ exec swayidle -w \
     bindsym $mod+Shift+x exec $lock
 
     # Open a pcman fm instance
-    bindsym $mod+p exec $explorer
+    bindsym $mod+e exec $explorer
     # Kill focused window
     bindsym $mod+Shift+q kill
 
@@ -89,11 +95,11 @@ exec swayidle -w \
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
+    bindsym $mod+Shift+c exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+f exec $browser
 # Moving around:
 #
     # Move your focus around
@@ -156,10 +162,10 @@ exec swayidle -w \
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+p layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    bindsym $mod+Shift+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
