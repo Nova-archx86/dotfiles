@@ -21,10 +21,11 @@ set $music $HOME/bin/music.sh
 set $background "#0e182a"
 set $foreground "#00b0d8"
 #set $menu bemenu-run --fn MononokiNerdFont --fbb $background --fbf $foreground --fb $background --ff $foreground --tb $background --tf $foreground --hb $foreground --hf $background --nb $background --nf $foreground --sb $foreground --sf $background --ab $background --af $foreground
-set $menu dmenu_run -fn MononokiNerdFont -nb $background -nf $foreground -sb $foreground -l 10
+set $menu dmenu_run -fn MononokiNerdFont -nb $background -nf $foreground -sb $foreground -sf $background -l 10
 set $emacs emacsclient -c
 set $explorer pcmanfm $HOME
 set $lock swaylock
+set $wiki $HOME/bin/wiki-search.sh
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -69,6 +70,9 @@ exec swayidle -w \
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    # Open the archlinux wiki pages
+    bindsym $mod+Shift+w exec $wiki
 
     # Play music
     bindsym $mod+Shift+m exec $music
