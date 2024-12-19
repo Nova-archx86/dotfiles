@@ -29,7 +29,10 @@ set $wiki $HOME/bin/wiki-search.sh
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+gaps inner 10
+gaps outer 10
 output * bg /home/nova/Sync/wallpapers/artix-2.png fill
+default_border pixel 2
 #
 # Example configuration:
 #
@@ -41,10 +44,10 @@ output * bg /home/nova/Sync/wallpapers/artix-2.png fill
 #
 # Example configuration:
 #
-exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep 'swaylock -f -c 000000'
+#exec swayidle -w \
+          #timeout 300 'swaylock -f -c 000000' \
+          #timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          #before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -234,17 +237,15 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command $HOME/bin/bar.sh
-
-    colors {
-        statusline #00b0d8
-        background #0e182a
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    status_command waybar
+    mode invisible
+    #colors {
+        #statusline #00b0d8
+        #background #0e182a
+        #inactive_workspace #32323200 #32323200 #5c5c5c
+    #}
 }
 
 include /etc/sway/config.d/*
