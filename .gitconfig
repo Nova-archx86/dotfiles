@@ -5,3 +5,9 @@
 	email = moorcode66@yahoo.com
 	name = Nova-archx86
 	signingkey = moorcode66@yahoo.com
+
+[commit]
+	gpgSign = True
+
+[tag]
+	gpgSign = True
