@@ -1,0 +1,15 @@
+#+title: Readme
+#+author: Nova-archx86
+#+date: <2025-10-20 Mon>
+
+
+* Installation
+At the time of writting this, my journey into NixOS and the Nix enviorment is still fairly new, so it is likely
+this flake will be unstable and quite a mess and will probably change... **A LOT**. With that said the only
+command ideally neaded to be run would be:
+
+#+begin_src shell :tangle README.md
+sudo nixos-rebuild switch --impure --flake .
+#+end_src
+
+While in the directory of the repo inside of an existing NixOS install.
