@@ -32,14 +32,6 @@ in
     font-awesome
   ];
 
-  # I use zsh btw :3
-  programs.zsh = {
-    enable = true;
-    syntaxHighlighting.enable = true;
-    enableLsColors = true;
-    enableCompletion = true;
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nova = {
     shell = pkgs.zsh;
