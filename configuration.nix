@@ -19,12 +19,8 @@ in
   home-manager.backupFileExtension = "backup";
   home-manager.users.nova = import ./home.nix;
 
-  # Bootloader shold be in the generated hardware-configuration.nix file rather than here for
-  # portabillity reasons.
-
   networking.hostName = "LT-Ceasium"; # Define your hostname.
   networking.wireless.iwd.enable = true;
-  #uncomment for wired connections (I use either iwd or wpa_supp for wireless on laptops)
   #networking.networkmanager.enable = true;
 
   nix.settings.experimental-features = [ "nix-command"  "flakes" ];
@@ -36,6 +32,7 @@ in
     font-awesome
   ];
 
+  # I use zsh btw :3
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
@@ -96,47 +93,50 @@ in
   
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; 
-  security.rtkit.enable = true;
 
-  programs.gnupg.agent = {
-     enable = true;
-     enableSSHSupport = true;
+  security = {
+    rtkit.enable = true;
+    doas.enable = true;
+    firewall.enable = true;
+    gpg.enable = true;
+    sshd.enable = false;
   };
 
-  # Services
-  services.openssh.enable = false;
-  services.printing.enable = true;
-  services.hypridle.enable = true;
-  services.gvfs.enable = true;
+  programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
 
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+  services = {
+    openssh.enable = false;
+    printing.enable = true;
+    hypridle.enable = true;
+    gvfs.enable = true;
+    xserver.xkb = { layout = "us"; variant = ""; };
+
+    pipewire = {
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
+        jack.enable = true;
+    };
+
+    emacs = {
+      enable = true;
+      package = pkgs.emacs;
+    };
+
+    syncthing = {
+      enable = true;
+      group = "syncthing";
+      user = "nova";
+      configDir = "/home/nova/.config/syncthing";
+      dataDir = "/home/nova/Sync";
+      overrideDevices = true;
+      overrideFolders = true;
+    };
+
   };
 
-  services.pipewire = {
-     enable = true;
-     alsa.enable = true;
-     alsa.support32Bit = true;
-     pulse.enable = true;
-     jack.enable = true;
-  };
-
-  services.emacs = {
-    enable = true;
-    package = pkgs.emacs;
-  };
-
-  services.syncthing = {
-    enable = true;
-    group = "syncthing";
-    user = "nova";
-    configDir = "/home/nova/.config/syncthing";
-    dataDir = "/home/nova/Sync";
-    overrideDevices = true;
-    overrideFolders = true;
-  };
-
+  # Clean up old pkgs automatically
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
   nix.gc.options = "--delete-older-than 10d";
