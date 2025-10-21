@@ -6,6 +6,7 @@
   home.stateVersion = "18.09";
 
   home.packages = with pkgs; [
+    zsh
     bat
     lsd
     spotify
@@ -14,6 +15,10 @@
     betterdiscordctl
     gh
     pika-backup
+    keepassxc
+    syncthing
+    emacs
+    hyprpaper
     #steam
   ];
 
@@ -25,6 +30,11 @@
     initExtra = ''
       export PROMPT="%F{cyan} %3~%f"$'\n'" λ " 
     '';
+  };
+
+  programs.hyprpaper = {
+    enable = true;
+
   };
 
   programs.git = {
