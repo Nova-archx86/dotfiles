@@ -32,7 +32,7 @@
       export PROMPT="%F{cyan} %3~%f"$'\n'" λ " 
     '';
   };
-
+  programs.waybar.enable = true;
   programs.git-credential-oauth.enable = true;
 
   programs.gh = {
