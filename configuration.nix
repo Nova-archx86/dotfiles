@@ -10,7 +10,7 @@ in
 {
   imports =
     [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix # requires --impure to be passed
       (import "${home-manager}/nixos")
     ];
 
@@ -93,27 +93,9 @@ in
     gvfs.enable = true;
     xserver.xkb = { layout = "us"; variant = ""; };
 
-    pipewire = {
-        enable = true;
-        alsa.enable = true;
-        alsa.support32Bit = true;
-        pulse.enable = true;
-        jack.enable = true;
-    };
-
     emacs = {
       enable = true;
       package = pkgs.emacs;
-    };
-
-    syncthing = {
-      enable = true;
-      group = "syncthing";
-      user = "nova";
-      configDir = "/home/nova/.config/syncthing";
-      dataDir = "/home/nova/Sync";
-      overrideDevices = true;
-      overrideFolders = true;
     };
 
   };

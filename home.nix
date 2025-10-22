@@ -1,6 +1,16 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    "./modules/git.nix"
+    "./modules/gh.nix"
+    "./modules/zsh.nix"
+    "./modules/gpg.nix"
+    "./modules/syncthing.nix"
+    "./modules/pipewire.nix"
+    "./modules/hyprland.nix"
+  ];
+
   home.username = "nova";
   home.homeDirectory = "/home/nova";
   home.stateVersion = "18.09";
@@ -22,39 +32,9 @@
     librewolf
     #steam
   ];
+ # bar
+ programs.waybar.enable = true;
 
-  programs.zsh = {
-    enable = true;
 
-    syntaxHighlighting.enable = true;
-    enableCompletion = true;
-    initContent = ''
-      export PROMPT="%F{cyan} %3~%f"$'\n'" λ " 
-    '';
-  };
-  programs.waybar.enable = true;
-  programs.git-credential-oauth.enable = true;
-
-  programs.gh = {
-    enable = true;
-    gitCredentialHelper.enable = true;
-  };
-
-  programs.git = {
-    enable = true;
-    
-    userName = "Nova-archx86";
-    userEmail = "moorcode66@yahoo.com";
-
-    signing = {
-      key = "moorcode66@yahoo.com";
-      signByDefault = true;
-    };
-
-  };
-
-  programs.gpg.enable = true;
-  programs.gpg.publicKeys = [ { source = /home/nova/moorcode66.gpg; } ];
-  services.gpg-agent.enable = true;
 
 }
