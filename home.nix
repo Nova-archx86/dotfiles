@@ -19,38 +19,34 @@
     syncthing
     emacs
     hyprpaper
+    librewolf
     #steam
   ];
-
-  # wm
-  programs.hyprland.enable = true;
 
   programs.zsh = {
     enable = true;
 
     syntaxHighlighting.enable = true;
     enableCompletion = true;
-    initExtra = ''
+    initContent = ''
       export PROMPT="%F{cyan} %3~%f"$'\n'" λ " 
     '';
   };
 
-  programs.hyprpaper = {
+  programs.git = {
     enable = true;
+    userName = "Nova-archx86";
+    userEmail = "moorcode66@yahoo.com";
 
-  };
-
-  programs.git.settings = {
-    enable = true;
-
-    user.email = "moorcode66@yahoo.com";
-    user.name = "Nova-archx86";
-
-    user.signing = {
+    signing = {
       key = "moorcode66@yahoo.com";
       signByDefault = true;
     };
 
   };
 
+  programs.gpg.enable = true;
+  programs.gpg.publicKeys = [ { source = /home/nova/moorcode66.gpg; } ];
+  services.gpg-agent.enable = true;
 }
+

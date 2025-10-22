@@ -32,6 +32,12 @@ in
     font-awesome
   ];
 
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-tty;
+  };
+  
+  programs.zsh.enable = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nova = {
     shell = pkgs.zsh;
@@ -47,7 +53,6 @@ in
   hardware = {
     graphics.enable = true;
   };
-
 
   # Hint to electron to use wayland over xwayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -71,18 +76,14 @@ in
     brightnessctl
     nh
     gvfs
+    gnupg
+    pinentry-tty
   ];
   
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; 
 
-  security = {
-    rtkit.enable = true;
-    doas.enable = true;
-    firewall.enable = true;
-    gpg.enable = true;
-    sshd.enable = false;
-  };
+  security.rtkit.enable = true;
   programs.hyprland = { enable = true; xwayland.enable = true; };
 
   services = {
