@@ -48,16 +48,6 @@ in
     graphics.enable = true;
   };
 
-  # WM
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
-  programs.hyprlock.enable = true;
-
-  # Bar
-  programs.waybar.enable = true;
 
   # Hint to electron to use wayland over xwayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -93,8 +83,7 @@ in
     gpg.enable = true;
     sshd.enable = false;
   };
-
-  programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
+  programs.hyprland = { enable = true; xwayland.enable = true; };
 
   services = {
     openssh.enable = false;

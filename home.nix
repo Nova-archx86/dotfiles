@@ -22,6 +22,9 @@
     #steam
   ];
 
+  # wm
+  programs.hyprland.enable = true;
+
   programs.zsh = {
     enable = true;
 
@@ -37,13 +40,13 @@
 
   };
 
-  programs.git = {
+  programs.git.settings = {
     enable = true;
 
-    userEmail = "moorcode66@yahoo.com";
-    userName = "Nova-archx86";
+    user.email = "moorcode66@yahoo.com";
+    user.name = "Nova-archx86";
 
-    signing = {
+    user.signing = {
       key = "moorcode66@yahoo.com";
       signByDefault = true;
     };
