@@ -2,13 +2,13 @@
 
 {
   imports = [
-    "./modules/git.nix"
-    "./modules/gh.nix"
-    "./modules/zsh.nix"
-    "./modules/gpg.nix"
-    "./modules/syncthing.nix"
-    "./modules/pipewire.nix"
-    "./modules/hyprland.nix"
+    ./modules/git.nix
+    ./modules/gh.nix
+    ./modules/zsh.nix
+    ./modules/gpg.nix
+    ./modules/syncthing.nix
+    ./modules/pipewire.nix
+    ./modules/hyprland.nix
   ];
 
   home.username = "nova";
