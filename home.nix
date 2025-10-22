@@ -33,8 +33,25 @@
     '';
   };
 
+  programs.git-credential-oauth.enable = true;
+
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper.enable = true;
+    hosts = {
+      "https://github.com" = {
+        user = "Nova-archx86";
+      };
+      
+      settings.git_protocol = "https";
+      settings.prompt = "enabled";
+
+    };
+  };
+
   programs.git = {
     enable = true;
+    
     userName = "Nova-archx86";
     userEmail = "moorcode66@yahoo.com";
 
@@ -48,5 +65,5 @@
   programs.gpg.enable = true;
   programs.gpg.publicKeys = [ { source = /home/nova/moorcode66.gpg; } ];
   services.gpg-agent.enable = true;
-}
 
+}
