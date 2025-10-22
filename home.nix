@@ -38,15 +38,6 @@
   programs.gh = {
     enable = true;
     gitCredentialHelper.enable = true;
-    hosts = {
-      "https://github.com" = {
-        user = "Nova-archx86";
-      };
-      
-      settings.git_protocol = "https";
-      settings.prompt = "enabled";
-
-    };
   };
 
   programs.git = {
