@@ -98,6 +98,13 @@ in
       package = pkgs.emacs;
     };
 
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
+    };
   };
 
   # Clean up old pkgs automatically
