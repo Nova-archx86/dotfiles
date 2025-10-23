@@ -24,11 +24,10 @@ in
       general = {
           gaps_in = "5";
           gaps_out = "10";
+_size = "3";
 
-          border_size = "3";
-
-          "col.active_border" = "rgb(94, 129, 172)";
-          "col.inactive_border" = "rgb(129, 161, 193)";
+          "col.active_border" = "rgb(5e81ac)";
+          "col.inactive_border" = "rgb(81a1c1)";
 
           resize_on_border = true;
 
@@ -47,9 +46,9 @@ in
           "shadow:range" = 2;
           "shadow:render_power" = 5;
           "shadow:sharp" = false;
-          "shadow:color" = "rgba(0, 0, 0, 0.85)";
+          "shadow:color" = "rgba(0,0,0,0.85)";
           "shadow:ignore_window" = true;
-          "shadow:offset" = 2;
+          "shadow:offset" = "2 2";
           "shadow:scale" = 1;
           "blur:enabled" = true;
       };
