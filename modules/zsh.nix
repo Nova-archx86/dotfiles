@@ -6,7 +6,6 @@
 
     syntaxHighlighting.enable = true;
     enableCompletion = true;
-    environment.pathsToLink = [ "/share/zsh" ];
     initContent = ''
       export PROMPT="%F{cyan} %3~%f"$'\n'" λ "
     '';
