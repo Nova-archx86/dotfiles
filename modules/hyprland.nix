@@ -10,7 +10,7 @@ let
 in
 {
   wayland.windowManager.hyprland = {
-    enabled = true;
+    enable = true;
     xwayland.enable = true;
     settings = {
       cursor = {
