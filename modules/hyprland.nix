@@ -24,7 +24,7 @@ in
       general = {
           gaps_in = "5";
           gaps_out = "10";
-_size = "3";
+          border_size = "3";
 
           "col.active_border" = "rgb(5e81ac)";
           "col.inactive_border" = "rgb(81a1c1)";
