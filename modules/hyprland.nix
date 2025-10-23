@@ -1,8 +1,17 @@
 { config, lib, pkgs, ... }:
 
+let
+  terminal = "kitty";
+  fileManager = "pcmanfm";
+  menu = "wofi";
+  screenshot = "hyprshot --mode region --output-folder /tmp";
+  lock = "hyprlock";
+  emacs = "emacsclient -c";
+in
 {
   wayland.windowManager.hyprland = {
     enabled = true;
+    xwayland.enable = true;
     settings = {
       cursor = {
         no_hardware_cursors = true;
@@ -53,7 +62,6 @@
           new_status = "master";
       };
 
-      # We have our own wallpapers :) So I'll disable default things.
       misc = {
           force_default_wallpaper = 0;
           disable_hyprland_logo = true;
@@ -63,14 +71,14 @@
       "$mainMod" = "ALT";
 
       bind = [
-        "$mainMod, Return, exec, $terminal"
+        "$mainMod, Return, exec, ${terminal}"
         "$mainMod, Q, killactive,"
-        "$mainMod SHIFT, S, exec, hyprshot --mode region --output-folder /tmp"
-        "$mainMod, E, exec, $fileManager"
+        "$mainMod SHIFT, S, exec, "
+        "$mainMod, E, exec, ${fileManager}"
         "$mainMod, F, fullscreen"
-        "$mainMod, D, exec, $menu"
-        "$mainMod, L, exec, hyprlock"
-        "$mainMod SHIFT, e, exec, emacsclient -c"
+        "$mainMod, D, exec, ${menu}"
+        "$mainMod, L, exec, ${lock}"
+        "$mainMod SHIFT, e, exec, ${emacs}"
         "$mainMod SHIFT, c, exec, hyprctl dispatch exit"
 
         "$mainMod, 1, workspace, 1"
@@ -84,7 +92,6 @@
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
 
-        # Move a focused window to a workspace with mainMod + SHIFT + [0-9]
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
         "$mainMod SHIFT, 3, movetoworkspace, 3"
