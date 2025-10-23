@@ -7,7 +7,6 @@
     ./modules/zsh.nix
     ./modules/gpg.nix
     ./modules/syncthing.nix
-    ./modules/pipewire.nix
     ./modules/hyprland.nix
   ];
 
