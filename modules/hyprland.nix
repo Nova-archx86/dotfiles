@@ -73,7 +73,7 @@ in
       bind = [
         "$mainMod, Return, exec, ${terminal}"
         "$mainMod, Q, killactive,"
-        "$mainMod SHIFT, S, exec, "
+        "$mainMod SHIFT, S, exec, ${screenshot}"
         "$mainMod, E, exec, ${fileManager}"
         "$mainMod, F, fullscreen"
         "$mainMod, D, exec, ${menu}"
