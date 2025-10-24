@@ -11,6 +11,7 @@
     ./modules/waybar.nix
     ./modules/kitty.nix
     ./modules/mako.nix
+    ./modules/wofi.nix
   ];
 
   home.username = "nova";
