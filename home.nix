@@ -43,6 +43,7 @@
     wofi
     shellcheck
     fastfetch
+    hyprshot
     #steam
   ];
  # bar
