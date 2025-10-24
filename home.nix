@@ -29,6 +29,9 @@
     keepassxc
     syncthing
     emacs
+    gh-markdown-preview
+    graphviz
+    sbclPackages.simple-inferiors
     hyprpaper
     librewolf
     waybar
@@ -38,6 +41,7 @@
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
     wofi
+    shellcheck
     #steam
   ];
  # bar
