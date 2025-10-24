@@ -42,6 +42,7 @@
     xdg-desktop-portal-gtk
     wofi
     shellcheck
+    fastfetch
     #steam
   ];
  # bar

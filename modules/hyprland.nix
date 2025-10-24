@@ -53,6 +53,12 @@ in
 
           active_opacity = "1.0";
           inactive_opacity = "1.0";
+          blur = {
+            enabled = true;
+            size = 8;
+            passes = 2;
+            new_optimizations = true;
+          };
 
           "shadow:enabled" = true;
           "shadow:range" = 2;
@@ -62,7 +68,6 @@ in
           "shadow:ignore_window" = true;
           "shadow:offset" = "2 2";
           "shadow:scale" = 1;
-          "blur:enabled" = false;
       };
 
       dwindle = {
@@ -134,7 +139,7 @@ in
       windowrulev2 = [
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
         "forcergbx, class:^(Emacs)$"
-        "opacity 0.85 0.85, class:^(Emacs)$"
+        "opacity 0.85 override 0.85 override, class: ^(Emacs)$"
       ];
     };
   };
