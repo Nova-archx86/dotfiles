@@ -4,7 +4,7 @@
   programs.kitty = {
     enable = true;
     shellIntegration.enableZshIntegration = true;
-    themeFile = "current-theme.conf"; # Usually set by kitty +kitten themes
+    themeFile = "current-theme"; # Usually set by kitty +kitten themes
     font.package = pkgs.nerd-fonts._0xproto;
     font.name = "0xProtoNerdFont";
     enableGitIntegration = true;
