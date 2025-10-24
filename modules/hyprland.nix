@@ -9,10 +9,22 @@ let
   emacs = "emacsclient -c";
 in
 {
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      preload = [ "~/Pictures/Wallpapers/nixos.png" ];
+      wallpapers = [ "DP-1,~/Pictures/Wallpapers/nixos.png" ];
+    };
+  };
+
+  services.hypridle.enable = true;
+  services.hyprlock.enable = true;
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     settings = {
+      exec-once = [ "waybar &" ];
       cursor = {
         no_hardware_cursors = true;
       };
