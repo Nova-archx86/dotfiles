@@ -3,7 +3,7 @@
 {
   services.syncthing = {
     enable = true;
-    tray.enable = true;
+    tray.enable = false; # broken
 
     settings = { gui.theme = "black"; };
 
