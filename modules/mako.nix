@@ -6,7 +6,7 @@
     settings = {
       actions = true;
       background-color = "#5e81ac";
-      border-color = "#88c0d0";
+      border-color = "#81a1c1";
     };
   };
 }
