@@ -19,9 +19,9 @@ in
   home-manager.backupFileExtension = "backup";
   home-manager.users.nova = import ./home.nix;
 
-  networking.hostName = "LT-Ceasium"; # Define your hostname.
-  networking.wireless.iwd.enable = true;
-  #networking.networkmanager.enable = true;
+  networking.hostName = "dt-polonium"; # Define your hostname.
+  #networking.wireless.iwd.enable = true;
+  networking.networkmanager.enable = true;
 
   nix.settings.experimental-features = [ "nix-command"  "flakes" ];
 
@@ -82,6 +82,8 @@ in
     gvfs
     gnupg
     pinentry-tty
+    #openlinkhub # Currently bugged. :(
+    openrgb
   ];
   
   xdg.portal.enable = true;
@@ -95,6 +97,7 @@ in
     printing.enable = true;
     hypridle.enable = true;
     gvfs.enable = true;
+
     xserver.xkb = { layout = "us"; variant = ""; };
 
     emacs = {
