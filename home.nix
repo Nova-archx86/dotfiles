@@ -10,6 +10,7 @@
     ./modules/hyprland.nix
     ./modules/waybar.nix
     ./modules/kitty.nix
+    ./modules/mako.nix
   ];
 
   home.username = "nova";
