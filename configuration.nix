@@ -115,7 +115,10 @@ in
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
   nix.gc.options = "--delete-older-than 10d";
-  nix.settings.auto-optimise-store = true; 
+  nix.settings.auto-optimise-store = true;
+
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [ 8384 ]; # 8384 = syncthing
   
   system.stateVersion = "24.11";
 
