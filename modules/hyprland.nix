@@ -24,7 +24,7 @@ in
     enable = true;
     xwayland.enable = true;
     settings = {
-      exec-once = [ "waybar &" ];
+      #exec-once = [ "" ];
       cursor = {
         no_hardware_cursors = true;
       };
