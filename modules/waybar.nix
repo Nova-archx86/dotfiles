@@ -4,6 +4,7 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true;
+    style = "/home/nova/.config/waybar/style.css";
     settings = {
       mainBar = {
         layer = "top";
@@ -65,8 +66,6 @@
         };
         
       };
-
-      style = "/home/nova/.config/waybar/style.css";
     };
   };
 }
