@@ -66,7 +66,7 @@
         
       };
 
-      style = ''
+      style = concatStrings [ ''
         @keyframes blink-warning {
             70% {
                 color: @light;
@@ -362,7 +362,7 @@
         #tray {
             background: #434C5E;
         }
-      '';
+      '' ];
 
     };
   };
