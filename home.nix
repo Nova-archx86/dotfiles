@@ -12,6 +12,8 @@
     ./modules/kitty.nix
     ./modules/mako.nix
     ./modules/wofi.nix
+    ./modules/mu.nix
+    ./modules/mbsync.nix
   ];
 
   home.username = "nova";
