@@ -8,10 +8,10 @@
       mainBar = {
         layer = "top";
         position = "top";
-        output = [];
-        modules-left = [];
-        modules-center = [];
-        modules-right = [];
+        modules-left = [ "clock" ];
+        modules-center = [ "idle_inhibitor" "hyprland/workspaces"];
+        modules-right = [ "pulseaudio" "network" "tray" ];
+
         "hyprland/workspaces" = {
           format = "{icon}";
           on-click = "activate";
@@ -25,7 +25,7 @@
           sort-by-number = true;
         };
 
-        idle_inhibitor = {
+        "idle_inhibitor" = {
           format = "{icon}";
           format-icons = {
             activated = "";
@@ -34,15 +34,15 @@
           tooltip = true;
         };
 
-        tray = { spacing = 5; };
+        "tray" = { spacing = 5; };
 
-        clock = {
+        "clock" = {
           format = "  {:%H:%M    %e %b}";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           today-format = "<b>{}</b>";
         };
 
-        network = {
+        "network" = {
           format-wifi = " {essid}";
           format-ethernet = " {ipaddr}/{cidr}";
           format-linked = " {ifname}: (No IP)";
@@ -50,7 +50,7 @@
           family = "ipv4";
         };
 
-        pulseaudio = {
+        "pulseaudio" = {
           scroll-step = 3;
           format = "{icon} {volume}% {format_source}";
           format-muted = "";
