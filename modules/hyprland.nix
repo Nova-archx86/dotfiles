@@ -62,7 +62,7 @@ in
           "shadow:ignore_window" = true;
           "shadow:offset" = "2 2";
           "shadow:scale" = 1;
-          "blur:enabled" = true;
+          "blur:enabled" = false;
       };
 
       dwindle = {
