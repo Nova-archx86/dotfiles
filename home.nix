@@ -9,6 +9,7 @@
     ./modules/syncthing.nix
     ./modules/hyprland.nix
     ./modules/waybar.nix
+    ./modules/kitty.nix
   ];
 
   home.username = "nova";
