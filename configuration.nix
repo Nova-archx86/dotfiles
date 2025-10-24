@@ -118,8 +118,8 @@ in
   nix.settings.auto-optimise-store = true;
 
   networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [ 8384 ]; # 8384 = syncthing
-  
+  networking.firewall.allowedTCPPorts = [ 8384 22000 ];
+  networking.firewall.allowedUDPPorts = [ 22000 21027 ];
   system.stateVersion = "24.11";
 
 }
