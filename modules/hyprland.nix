@@ -13,7 +13,7 @@ in
     enable = true;
     settings = {
       preload = [ "~/Pictures/Wallpapers/nixos.png" ];
-      wallpapers = [ "DP-1,~/Pictures/Wallpapers/nixos.png" ];
+      wallpaper = [ "DP-1,~/Pictures/Wallpapers/nixos.png" ];
     };
   };
 
