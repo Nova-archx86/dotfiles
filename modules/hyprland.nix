@@ -56,7 +56,7 @@ in
           blur = {
             enabled = true;
             size = 8;
-            passes = 2;
+            passes = 1;
             new_optimizations = true;
           };
 
