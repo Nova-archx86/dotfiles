@@ -131,7 +131,11 @@ in
       ];
 
       # Fix dragging issues with XWayland
-      windowrulev2 = "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0";
+      windowrulev2 = [
+        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+        "forcergbx, class:^(Emacs)$"
+        "opacity 0.85 0.85, class:^(Emacs)$"
+      ];
     };
   };
 }
