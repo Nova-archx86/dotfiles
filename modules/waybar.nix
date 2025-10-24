@@ -66,7 +66,7 @@
         
       };
 
-      style = concatStrings [ ''
+      style = [ ''
         @keyframes blink-warning {
             70% {
                 color: @light;
