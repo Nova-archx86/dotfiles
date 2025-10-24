@@ -3,7 +3,7 @@
 let
   terminal = "kitty";
   fileManager = "pcmanfm";
-  menu = "wofi";
+  menu = "wofi --show run";
   screenshot = "hyprshot --mode region --output-folder /tmp";
   lock = "hyprlock";
   emacs = "emacsclient -c";
