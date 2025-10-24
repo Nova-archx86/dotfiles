@@ -10,7 +10,6 @@
 
     settings = {
       background_opacity = 0.9;
-
     };
     
   };
