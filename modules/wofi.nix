@@ -9,7 +9,7 @@
     };
     style = ''
       * {
-        font-family: "Hack", monospace;
+        font-family: "0xproto", monospace;
       }
 
       window {
