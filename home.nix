@@ -29,11 +29,15 @@
     emacs
     hyprpaper
     librewolf
+    waybar
+    wireplumber
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal-gtk
+    wofi
     #steam
   ];
  # bar
- programs.waybar.enable = true;
-
-
 
 }
