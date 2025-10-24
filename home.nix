@@ -8,6 +8,7 @@
     ./modules/gpg.nix
     ./modules/syncthing.nix
     ./modules/hyprland.nix
+    ./modules/waybar.nix
   ];
 
   home.username = "nova";
