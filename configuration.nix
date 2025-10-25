@@ -84,6 +84,7 @@ in
     pinentry-tty
     #openlinkhub # Currently bugged. :(
     openrgb
+    nodejs
   ];
   
   xdg.portal.enable = true;
