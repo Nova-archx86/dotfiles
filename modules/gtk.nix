@@ -4,6 +4,6 @@
   gtk = {
     enable = true;
     theme.name = "Arc-Darker";
-    package = pkgs.arc-theme;
+    theme.package = pkgs.arc-theme;
   };
 }

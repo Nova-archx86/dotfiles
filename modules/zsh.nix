@@ -12,6 +12,7 @@
     '';
     shellAliases = {
       nrs = "sudo nixos-rebuild switch --impure --flake /home/nova/dotfiles/";
+      bdupdate = "betterdiscordctl -f canary install";
     };
   };
 
