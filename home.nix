@@ -14,6 +14,7 @@
     ./modules/wofi.nix
     ./modules/mu.nix
     ./modules/mbsync.nix
+    ./modules/gtk.nix
   ];
 
   home.username = "nova";
