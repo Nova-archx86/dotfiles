@@ -54,6 +54,7 @@
     isync
     hyprland-workspaces
     clang-tools
+    nixfmt
     #steam
   ];
  # bar
