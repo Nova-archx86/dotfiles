@@ -49,6 +49,7 @@
     fastfetch
     hyprshot
     mu
+    pavucontrol
     isync
     #steam
   ];
