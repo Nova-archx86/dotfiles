@@ -86,6 +86,7 @@ in
     openrgb
     nodejs
     clang-tools
+    ccls
   ];
   
   xdg.portal.enable = true;
