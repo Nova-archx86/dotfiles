@@ -52,6 +52,7 @@
     mu
     pavucontrol
     isync
+    hyprland-workspaces
     #steam
   ];
  # bar
