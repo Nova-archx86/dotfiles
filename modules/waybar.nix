@@ -306,8 +306,8 @@
       mainBar = {
         layer = "top";
         position = "top";
-        modules-left = [ "clock" ];
-        modules-center = [ "idle_inhibitor" "hyprland/workspaces"];
+        modules-left = [ "clock" "idle_inhibitor" ];
+        modules-center = [ "hyprland/workspaces"];
         modules-right = [ "pulseaudio" "network" "tray" ];
 
         "hyprland/workspaces" = {
