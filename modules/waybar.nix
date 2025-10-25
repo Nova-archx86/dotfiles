@@ -360,6 +360,7 @@
             headset = "";
             default = ["" "" ""];
           };
+          on-click = "pavucontrol";
         };
         
       };
