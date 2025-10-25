@@ -85,6 +85,7 @@ in
     #openlinkhub # Currently bugged. :(
     openrgb
     nodejs
+    clang-tools
   ];
   
   xdg.portal.enable = true;
