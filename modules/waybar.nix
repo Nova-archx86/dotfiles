@@ -300,6 +300,10 @@
       #tray {
           background: #434C5E;
       }
+      #hyprland-workspaces {
+         background: @nord_bg;
+         color: #ffffff;
+      }
 
     '';
     settings = {
