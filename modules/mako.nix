@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       actions = true;
-      default-time-out = 15;
+      #default-time-out = 15;
       background-color = "#3b4252";
       border-color = "#5e81ac";
     };
