@@ -53,6 +53,7 @@
     pavucontrol
     isync
     hyprland-workspaces
+    clang-tools
     #steam
   ];
  # bar
