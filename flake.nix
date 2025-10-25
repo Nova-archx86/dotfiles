@@ -6,9 +6,16 @@
   };
 
   outputs = { self, nixpkgs, ... }: {
-    nixosConfigurations.dt-polonium = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [ ./configuration.nix ];
+    nixosConfigurations = {
+      dt-polonium = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [ ./hosts/polonium/configuration.nix ];
+      };
+      
+      lt-caesium = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [ ./hosts/caesium/configuration.nix ];
+      };
     };
   };
 }
