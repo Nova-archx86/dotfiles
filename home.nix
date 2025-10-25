@@ -48,6 +48,8 @@
     shellcheck
     fastfetch
     hyprshot
+    mu
+    isync
     #steam
   ];
  # bar
