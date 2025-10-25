@@ -12,8 +12,8 @@ in
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "~/Pictures/Wallpapers/nixos.png" ];
-      wallpaper = [ "DP-1,~/Pictures/Wallpapers/nixos.png" ];
+      preload = [ "~/Pictures/Wallpapers/wild.png" ];
+      wallpaper = [ "DP-1,~/Pictures/Wallpapers/wild.png" ];
     };
   };
 
