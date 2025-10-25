@@ -25,6 +25,7 @@ in
     xwayland.enable = true;
     settings = {
       #exec-once = [ "" ];
+      monitor = "monitor=DP-1,1920x1080@180.06,0x0,1";
       cursor = {
         no_hardware_cursors = true;
       };
