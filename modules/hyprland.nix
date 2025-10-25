@@ -26,9 +26,6 @@ in
     settings = {
       #exec-once = [ "" ];
       monitor = "DP-1,1920x1080@180.06,0x0,1";
-      cursor = {
-        no_hardware_cursors = true;
-      };
 
       animations = {
           enabled = true;
