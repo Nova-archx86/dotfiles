@@ -1,18 +1,22 @@
 {
-  description = "A very basic flake";
+  description = "My personal NixOS Flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, ... }: {
+  outputs = { self, nixpkgs, ... }:
+    let
+      lib = nixpkgs.lib;
+    in
+    {
     nixosConfigurations = {
-      dt-polonium = nixpkgs.lib.nixosSystem {
+      dt-polonium = lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ ./hosts/polonium/configuration.nix ];
       };
       
-      lt-caesium = nixpkgs.lib.nixosSystem {
+      lt-caesium = lib.nixosSystem {
         system = "x86_64-linux";
         modules = [ ./hosts/caesium/configuration.nix ];
       };

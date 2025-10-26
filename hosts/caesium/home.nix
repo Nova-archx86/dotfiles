@@ -2,19 +2,19 @@
 
 {
   imports = [
-    ../modules/git.nix
-    ../modules/gh.nix
-    ../modules/zsh.nix
-    ../modules/gpg.nix
-    ../modules/syncthing.nix
-    ../modules/hyprland.nix
-    ../modules/waybar.nix
-    ../modules/kitty.nix
-    ../modules/mako.nix
-    ../modules/wofi.nix
-    ../modules/mu.nix
-    ../modules/mbsync.nix
-    ../modules/gtk.nix
+    ../../modules/git.nix
+    ../../modules/gh.nix
+    ../../modules/zsh.nix
+    ../../modules/gpg.nix
+    ../../modules/syncthing.nix
+    ../../modules/hyprland.nix
+    ../../modules/waybar.nix
+    ../../modules/kitty.nix
+    ../../modules/mako.nix
+    ../../modules/wofi.nix
+    ../../modules/mu.nix
+    ../../modules/mbsync.nix
+    ../../modules/gtk.nix
   ];
 
   home.username = "nova";
